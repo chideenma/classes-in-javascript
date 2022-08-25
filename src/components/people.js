@@ -6,7 +6,7 @@ class people {
     }
     people1() {
         let people1 = new Person();
-        console.log(people1)
+        console.log(people1);
       }
 
 }
