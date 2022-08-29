@@ -1,19 +1,49 @@
-class people {
-    constructor (firstName, age, address) {
-        this.firstName = firstName;
-        this.age = age;
-        this.address = address;
-    }
-    people1() {
-        let people1 = new Person();
-        console.log(people1)
+import React from 'react'
+
+export default function people() {
+    class Person {
+        constructor (firstName, age, address) {
+            console.log("the class is being created");
+            this.firstName = firstName;
+            this.age = age;
+            this.address = address;
+        }
+
+        increasePersonAge() {
+            this.age = Number(this.age)+ 1
+        }
+
+        changePersonName(newName) {
+            this.firstName = newName
+
+        }
+        changePersonAddress(newAddess){
+            this.address = newAddess
+        }
+        getBirthYear(){
+            new Date().getFullYear() - this.age 
+        }
+      
       }
 
+      firstPerson.changePersonName('Mike')
+
+      console.log(Person);
+      // people1() {
+      //   let person1 = new Person();
+      //   console.log("person1");
+      // }
+      
+      const firstPerson = new Person("Dan", 25, "Bauchi");
+      const secondPerson = new Person("Ella", 28, "Lagos");
+      const thirdPerson = new Person("Zubby", 30, "Ondo");
+      const fourthPerson = new Person("Zinny", 27, "Delta");
+      
+      console.log(firstPerson, secondPerson, thirdPerson, fourthPerson)
+
+      
+      
+  return (
+    <div>{Person}</div>
+  )
 }
-console.log(people)
-
-let people1 = new Person("Dan", 25, "Bauchi");
-let people2 = new Person("Ella", 28, "Lagos");
-let people3 = new Person("Zubby", 30, "Ondo");
-let people4 = new Person("Zinny", 27, "Delta");
-
